@@ -5,24 +5,22 @@ birthdayDay = 30
 name = 'Rebecca'
 
 # Get today's date
-t=datetime.date.today()
+todaysDate=datetime.date.today()
 # Create date object for birthday
-bd=datetime.date(t.year, birthdayMonth, birthdayDay)
+birthdayDate=datetime.date(todaysDate.year, birthdayMonth, birthdayDay)
 
-# if today > birthday compare again with year + 1
-if t > bd :
-    # print('Birthday is before today')
+# if today > birthday, set birthday to next year.
+if todaysDate > birthdayDate :
     nextYear = t.year + 1
-    bd=datetime.date(nextYear, birthdayMonth, birthdayDay)
-    # print('Birthday changed to ' , bd)
+    birthdayDate=datetime.date(nextYear, birthdayMonth, birthdayDay)
 
 # Compare today's date to birthday and return days until
-delta = bd - t
-difference = delta.days.__str__()
+delta = birthdayDate - todaysDate
+difference = delta.days
 
 # If delta < 33 days = output message to terminal
 if delta.days < 33 :
-    print(name + "'s birthday is in "+difference+" days.")
+    print(name + "'s birthday is in", difference, "days.")
 
 
 
