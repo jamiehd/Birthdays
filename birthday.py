@@ -1,8 +1,6 @@
 import datetime
 
-birthdayMonth = 4
-birthdayDay = 30
-name = 'Rebecca'
+birthdays = [{day: 4, month: 30, name : 'Rebecca'},{day: 10, month: 08, name : 'Jamie'}]
 
 # Get today's date
 todaysDate=datetime.date.today()
